@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import daisyui from "daisyui";
 
 export default {
   content: [
@@ -11,8 +12,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "purple-start": "#5e42a6",
+        "pink-end": "#b74e91",
+      },
+      backgroundImage: {
+        "custom-gradient": "linear-gradient(to right, #5e42a6, #b74e91)",
       },
     },
   },
-  plugins: [],
+  plugins: [daisyui],
 } satisfies Config;
