@@ -1,23 +1,27 @@
 export interface iTimelineData {
+  id?: string;
   year: string;
   title: string;
   company: string;
   description: string[];
+  nodeNum: number;
   head?: boolean;
   tail?: boolean;
   isLeft?: boolean;
 }
 
 export interface iWhatIDoData {
-  workTitle: string;
-  workSubtitle: string;
-  workDescription: string;
-  workType: "Projects" | "Courses";
-  workTopic: "JS" | "CSHARP" | "C&CPP" | "PYTHON" | "COURCES";
-  workProjects?: Partial<iProjectDetails[]>;
+  id?: string;
+  workTitle?: string;
+  workSubtitle?: string;
+  workDescription?: string;
+  workType?: "Projects" | "Courses";
+  workTopic?: "JS" | "CSHARP" | "C&CPP" | "PYTHON" | "COURCES";
+  workProjects?: Partial<Array<Partial<iProjectDetails>>>;
 }
 
 export interface iProjectDetails {
+  id?: string;
   projImgPath: string;
   projTopic: "JS" | "CSHARP" | "C&CPP" | "PYTHON" | "COURCES";
   projTitle: string;

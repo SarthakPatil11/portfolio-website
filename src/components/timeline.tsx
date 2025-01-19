@@ -4,7 +4,7 @@ import { iTimelineData } from "@/types/types";
 export default function Timeline({
   listTimelineData,
 }: {
-  listTimelineData: iTimelineData[];
+  listTimelineData: Array<Partial<iTimelineData>>;
 }) {
   return (
     <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
@@ -15,7 +15,7 @@ export default function Timeline({
   );
 }
 
-function Milestone({ timelineData }: { timelineData: iTimelineData }) {
+function Milestone({ timelineData }: { timelineData: Partial<iTimelineData> }) {
   return (
     <li>
       {timelineData.head ? "" : <hr className="bg-zinc-300" />}
@@ -37,7 +37,7 @@ function Milestone({ timelineData }: { timelineData: iTimelineData }) {
           </p>
           <div className="text-zinc-200 text-sm">
             <ul className="list-disc pl-5">
-              {timelineData.description.map((v, i) => (
+              {timelineData.description?.map((v, i) => (
                 <li key={i}>{v}</li>
               ))}
             </ul>

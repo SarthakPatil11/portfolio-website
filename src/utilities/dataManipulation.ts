@@ -11,15 +11,3 @@ export function categorizeBySafe<T, K extends keyof T>(
     return acc;
   }, {} as Record<string, T[]>);
 }
-
-// Example with null/undefined
-// const productsWithMissingCategory = [
-//   ...products,
-//   { id: 5, name: "Unknown Item", category: null, price: 10 },
-// ] as Product[];
-
-// const categorizedSafe = categorizeBySafe(
-//   productsWithMissingCategory,
-//   "category"
-// );
-// console.log(categorizedSafe);

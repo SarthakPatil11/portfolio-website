@@ -16,19 +16,36 @@ export default function Footer() {
           <Phone className="h-4" /> (+91) 7387945311
         </p>
         <p className="flex gap-1 mt-[-4px] ms-[-6px] p-1 rounded-md hover:bg-zinc-600">
-          <Link className="h-4" /> Resume
+          <Link className="h-4" />{" "}
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1GVvpfhSnA9fiABNenBUf1Svuv0c_flOR/view?usp=drivesdk"
+          >
+            Resume
+          </a>
         </p>
       </aside>
       <nav>
         <h6 className="footer-title text-white">Social</h6>
         <div className="grid grid-flow-col gap-3 text-zinc-400">
-          <a className="mt-[-10px] p-1 rounded-md hover:bg-zinc-600">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/sarthak-sandeep-patil"
+            className="mt-[-10px] p-1 rounded-md hover:bg-zinc-600"
+          >
             <Linkedin />
           </a>
-          <a className="mt-[-10px] p-1 rounded-md hover:bg-zinc-600">
+          <a
+            target="_blank"
+            href="https://github.com/SarthakPatil11"
+            className="mt-[-10px] p-1 rounded-md hover:bg-zinc-600"
+          >
             <Github />
           </a>
-          <a className="mt-[-10px] p-1 rounded-md hover:bg-zinc-600">
+          <a
+            target="_blank"
+            className="mt-[-10px] p-1 rounded-md hover:bg-zinc-600"
+          >
             <Instagram />
           </a>
         </div>

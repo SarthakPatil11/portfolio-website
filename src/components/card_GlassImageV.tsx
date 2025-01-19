@@ -15,6 +15,8 @@ export default function Card_GlassImageV({
   description?: string;
   links?: iButton[];
 }) {
+  const linkLength = links?.length ?? 0;
+
   return (
     <div className="card glass w-96">
       <figure>
@@ -30,7 +32,11 @@ export default function Card_GlassImageV({
         <h2 className="card-title text-xl">{title}</h2>
         <h3 className="font-bold text-sm text-zinc-200">{subtitle}</h3>
         <p className="text-zinc-300 text-justify text-sm">{description}</p>
-        <div className="card-actions justify-end">
+        <div
+          className={`card-actions ${
+            linkLength > 1 ? "justify-between" : "justify-end"
+          }`}
+        >
           {links?.map((v, i) => (
             <CTAButton key={i} href={v.btnLink}>
               {v.btnText}

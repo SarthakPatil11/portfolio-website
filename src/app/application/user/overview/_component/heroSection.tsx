@@ -23,12 +23,16 @@ export default function HeroSection() {
             A <span className="text-yellow-500">Software Developer</span> likes
             to solve problems and enjoy learning new things.
             <br />
-            Currently, Learning 
+            Currently, Learning
             <span className="text-yellow-500"> UI/ UX Design</span>.
           </p>
-          <button className="btn btn-warning text-white">
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1GVvpfhSnA9fiABNenBUf1Svuv0c_flOR/view?usp=drivesdk"
+            className="btn btn-warning text-white"
+          >
             Resume <ExternalLink className="h-4" />
-          </button>
+          </a>
         </div>
       </div>
     </div>

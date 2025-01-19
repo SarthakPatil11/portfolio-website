@@ -6,10 +6,10 @@ export default function Card_Glass({
   CTAText,
   workTopic,
 }: {
-  title: string;
-  description: string;
-  CTAText: string;
-  workTopic: string;
+  title?: string;
+  description?: string;
+  CTAText?: string;
+  workTopic?: string;
 }) {
   return (
     <div className="card glass w-96">

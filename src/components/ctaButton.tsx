@@ -15,8 +15,7 @@ export default function CTAButton({
   children?: React.ReactNode;
   isDisabled?: boolean;
 }) {
-  const defaultClasses =
-    "btn btn-warning";
+  const defaultClasses = "btn btn-warning";
   const defaultClassesOutlined =
     "btn bg-transparent border-warning text-warning hover:bg-yellow-600 hover:text-white";
 
@@ -25,6 +24,7 @@ export default function CTAButton({
       <>
         {isOutlined ? (
           <Link
+            target="_blank"
             className={`${defaultClassesOutlined} ${className}`}
             href={href}
             onClick={onClick}
@@ -33,6 +33,7 @@ export default function CTAButton({
           </Link>
         ) : (
           <Link
+            target="_blank"
             className={`${defaultClasses} ${className}`}
             href={href}
             onClick={onClick}
