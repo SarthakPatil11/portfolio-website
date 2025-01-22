@@ -12,7 +12,6 @@ export async function getTimelineData(): Promise<
 
     querySnapshot.forEach((doc) => {
       projects.push({ ...doc.data(), id: doc.id });
-      console.log(doc.id, " => ", doc.data());
     });
 
     return projects;

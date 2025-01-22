@@ -10,7 +10,6 @@ export async function getWhatIDoData(): Promise<Array<Partial<iWhatIDoData>>> {
 
     querySnapshot.forEach((doc) => {
       projects.push({ ...doc.data(), id: doc.id });
-      console.log(doc.id, " => ", doc.data());
     });
 
     return projects;
